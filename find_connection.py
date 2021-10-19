@@ -9,7 +9,8 @@ def add_seen(seen, dcur):
     return seen.union(new), new
 
 def alarm():
-    print('\aGAME FOUND')
+    while True:
+        print('\aGAME FOUND - close me to stop beeping')
 
 def main(dtgt):
     dpid = [i for i in psutil.process_iter() if i.name()=="D2R.exe"][0].pid
