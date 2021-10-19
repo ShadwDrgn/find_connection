@@ -1,3 +1,4 @@
+import sys
 import time
 import psutil
 def get_dcur(dpid):
@@ -23,4 +24,9 @@ def main(dtgt):
 
 
 if __name__ == '__main__':
-    main('24.105.29.76')
+    if (len(sys.argv) <= 1 or re.match(r'\d+\.\d+\.\d+\.\d+', sys.argv[1]) is None):
+        search_ip = '127.0.0.1'
+        print(f'passed argument is not an IP Address. Using default: {search_ip}')
+    else:
+        search_ip = sys.argv[1]
+    main(search_ip)
