@@ -9,7 +9,7 @@ find_connections.py <IP TO FIND>
 ```
 
 
-for example if you're lookign for 1.1.1.1:
+for example if you're looking for 1.1.1.1:
 
 ```
 find_connections.py 1.1.1.1
